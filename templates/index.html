@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sensory AI</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+  <div class="dashboard">
+    <h1 class="glow-text" style="margin-bottom: 2rem;">Sensory AI <i class="fas fa-robot"></i></h1>
+    <div class="columns">
+      <!-- Left Column: Video Container & Controls -->
+      <div class="left-column">
+        <div id="videoContainer">
+          <div class="status-bar">
+            <div class="status-item">
+              <i class="fas fa-circle pulse" style="color: var(--primary);"></i>
+              <span>LIVE FEED</span>
+            </div>
+          </div>
+          <img id="videoFeed" src="https://media.giphy.com/media/3o7aD2saalBwwftBIY/giphy.gif" alt="Video Feed">
+        </div>
+        <div class="controls">
+          <button class="btn" id="startButton">
+            <i class="fas fa-play"></i>
+            Start Camera
+          </button>
+          <button class="btn" id="stopButton" disabled>
+            <i class="fas fa-stop"></i>
+            Stop Camera
+          </button>
+          <button class="btn" id="summaryButton">
+            <i class="fas fa-brain"></i>
+            Hear Me Out!
+          </button>
+        </div>
+        <div id="summaryResult"></div>
+      </div>
+      <!-- Right Column: Robot -->
+      <div class="right-column">
+        <div class="robot">
+          <!-- Head with Cap and Ears -->
+          <div class="head">
+            <div class="cap"></div>
+            <div class="eye left"></div>
+            <div class="eye right"></div>
+            <!-- New Mouth Animation Element -->
+            <div class="mouth">
+              <div class="bar" style="animation-delay: 0s;"></div>
+              <div class="bar" style="animation-delay: 0.1s;"></div>
+              <div class="bar" style="animation-delay: 0.2s;"></div>
+              <div class="bar" style="animation-delay: 0.3s;"></div>
+              <div class="bar" style="animation-delay: 0.4s;"></div>
+            </div>
+          </div>
+          <!-- Neck -->
+          <div class="neck"></div>
+          <!-- Body Assembly with Arms and Torso -->
+          <div class="body-assembly">
+            <!-- Left Arm -->
+            <div class="arm left">
+              <div class="upper-arm"></div>
+              <div class="forearm"></div>
+              <div class="hand">
+                <div class="fingers">
+                  <div class="finger"></div>
+                  <div class="finger"></div>
+                  <div class="finger"></div>
+                </div>
+              </div>
+            </div>
+            <!-- Torso -->
+            <div class="torso"></div>
+            <!-- Right Arm -->
+            <div class="arm right">
+              <div class="upper-arm"></div>
+              <div class="forearm"></div>
+              <div class="hand">
+                <div class="fingers">
+                  <div class="finger"></div>
+                  <div class="finger"></div>
+                  <div class="finger"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Legs -->
+          <div class="legs">
+            <div class="leg left">
+              <div class="thigh"></div>
+              <div class="calf"></div>
+              <div class="foot"></div>
+            </div>
+            <div class="leg right">
+              <div class="thigh"></div>
+              <div class="calf"></div>
+              <div class="foot"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
