@@ -1,0 +1,7 @@
+groq 
+opencv-python
+wave 
+pyaudio==0.2.14
+flask 
+openai 
+python-dotenv
